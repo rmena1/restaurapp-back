@@ -23,7 +23,9 @@ def get_by_date(date_from, date_to):
 # get data by exact date
 @bp.route('/get_by_date/<date>')
 def get_by_exact_date(date):
+    print('date: ', date)
     data = utils.get_data()
     data_filtered = [d for d in data if d['date_closed'].split(' ')[0] == date]
+    print('DATA FILTERED, ready to return')
     return jsonify(data_filtered)
 

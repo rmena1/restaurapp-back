@@ -79,7 +79,6 @@ google-pasta==0.2.0
 greenlet==1.0.0
 grpcio==1.42.0
 gunicorn==20.1.0
-gurobipy==9.0.1
 h11==0.13.0
 h5py==3.6.0
 hyperlink==21.0.0

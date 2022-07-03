@@ -3,7 +3,8 @@ import requests
 import json
 
 def get_data():
-    print('GETTING DATA')
     data = requests.get('https://storage.googleapis.com/backupdatadev/ejercicio/ventas.json')
-    print('DATA:', data)
     return json.loads(data.content)
+
+def order_by_date(data):
+    return sorted(data, key=lambda k: k['date_closed'])

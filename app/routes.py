@@ -25,6 +25,7 @@ def get_by_date(date_from, date_to):
 # get data by exact date
 @bp.route('/get_by_date/<date>')
 def get_by_exact_date(date):
+    print('GETTING EXACT DATE')
     data = utils.get_data()
     filtered_data = [d for d in data if d['date_closed'].split(' ')[0] == date]
     ordered_data = utils.order_by_date(filtered_data)

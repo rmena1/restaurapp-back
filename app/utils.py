@@ -3,7 +3,6 @@ import requests
 import json
 
 def get_data():
-    print('get_data()')
     data = requests.get('https://storage.googleapis.com/backupdatadev/ejercicio/ventas.json')
     return json.loads(data.content)
 

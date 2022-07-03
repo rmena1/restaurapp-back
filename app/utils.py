@@ -7,4 +7,4 @@ def get_data():
     return json.loads(data.content)
 
 def order_by_date(data):
-    return sorted(data, key=lambda k: k['date_closed'])
+    return sorted(data, key=lambda k: k['date_closed'], reverse=True)

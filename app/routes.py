@@ -12,6 +12,7 @@ bp = Blueprint('routes', __name__, url_prefix='/')
 def get_all():
     data = utils.get_data()
     data = utils.order_by_date(data)
+    data = utils.limit_data(data, 300)
     return jsonify(data)
 
 # get data by date range

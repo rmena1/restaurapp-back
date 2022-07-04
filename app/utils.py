@@ -8,3 +8,7 @@ def get_data():
 
 def order_by_date(data):
     return sorted(data, key=lambda k: k['date_closed'], reverse=True)
+
+#limit data quantity
+def limit_data(data, limit):
+    return data[:limit]

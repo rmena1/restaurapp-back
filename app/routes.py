@@ -42,4 +42,4 @@ def get_info(date_from, date_to):
     avarage_sales = total_sales / len(filtered_data)
     # avarege diners
     avarage_diners = sum([d['diners'] for d in filtered_data]) / len(filtered_data)
-    return jsonify({'total_sales': total_sales, 'avarage_sales': avarage_sales, 'avarage_diners': avarage_diners})
+    return jsonify({'total_sales': int(total_sales), 'avarage_sales': f'{avarage_sales:.2f}', 'avarage_diners': f'{avarage_diners:.2f}'})

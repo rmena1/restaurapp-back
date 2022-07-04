@@ -1,6 +1,6 @@
 # RestaurAPP
 
-Esta aplicación es el Back End de la prueba de aplicación a toteat. Esta fue desarrollada en flask. Para ejecutar este servicio en su máquina local, se deben seguir los siguientes pasos desde la consola, ubicado en el directorio raíz de este repositorio:
+Esta aplicación es el Back End creado para la prueba técnica de aplicación a toteat. Esta fue desarrollada en flask. Para ejecutar este servicio en su máquina local, se deben seguir los siguientes pasos desde la consola, ubicado en el directorio raíz de este repositorio:
 
 1. Instalar dependencias (suponemos que ya se tiene instalado python)
 

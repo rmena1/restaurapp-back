@@ -83,14 +83,17 @@ def get_product_sales(date_from, date_to, category):
                 products.append(p)
     # add sales of each product
     sales = {}
+    quantity = {}
     for p in products:
         if p['name'] in sales:
             sales[p['name']] += (p['price'] * p['quantity'])
+            quantity[p['name']] += p['quantity']
         else:
             sales[p['name']] = (p['price'] * p['quantity'])
+            quantity[p['name']] = p['quantity']
     final_sales = []
     for s in sales:
-        final_sales.append({'name': s, 'sales': sales[s]})
+        final_sales.append({'name': s, 'sales': sales[s], 'quantity': quantity[s]})
     return jsonify(final_sales)
 
 # get product, category or total sales for each day between date range
